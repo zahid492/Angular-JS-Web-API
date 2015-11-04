@@ -1,0 +1,102 @@
+﻿            <!-- BEGIN PAGE -->
+<div id="main-content">
+    <!-- BEGIN PAGE CONTAINER-->
+    <div class="container-fluid">
+        <!-- BEGIN PAGE HEADER-->
+        <div class="row-fluid">
+            <div class="span12">
+                <!-- BEGIN THEME CUSTOMIZER-->
+                <div id="theme-change" class="hidden-phone">
+                    <i class="icon-cogs"></i>
+                    <span class="settings">
+                        <span class="text">Theme:</span>
+                        <span class="colors">
+                            <span class="color-default" data-style="default"></span>
+                            <span class="color-gray" data-style="gray"></span>
+                            <span class="color-purple" data-style="purple"></span>
+                            <span class="color-navy-blue" data-style="navy-blue"></span>
+                        </span>
+                    </span>
+                </div>
+                <!-- END THEME CUSTOMIZER-->
+                <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+                <h3 class="page-title">
+                    Profile
+                    <small>simple profile page</small>
+                </h3>
+                <ul class="breadcrumb">
+                    <li>
+                        <a href="#"><i class="icon-home"></i></a><span class="divider">&nbsp;</span>
+                    </li>
+                    <li>
+                        <a href="#">Sample Pages</a> <span class="divider">&nbsp;</span>
+                    </li>
+                    <li><a href="#">Profile</a><span class="divider-last">&nbsp;</span></li>
+                </ul>
+                <!-- END PAGE TITLE & BREADCRUMB-->
+            </div>
+        </div>
+        <!-- END PAGE HEADER-->
+        <!-- BEGIN PAGE CONTENT-->
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="widget">
+                    <div class="widget-title">
+                        <h4><i class="icon-user"></i>Profile</h4>
+                        <span class="tools">
+                            <a href="javascript:;" class="icon-chevron-down"></a>
+                            <a href="javascript:;" class="icon-remove"></a>
+                        </span>
+                    </div>
+                    <div class="widget-body">
+                        <div class="span3">
+                            <div class="text-center profile-pic">
+                                <img src="img/profile-pic.jpg" alt="">
+                            </div>
+
+                        </div>
+                        <div class="span6">
+                            <h4>{{s.Name}}<br /><small></small></h4>
+                            <table class="table table-borderless">
+                                <tbody>
+                                    <tr>
+                                        <td class="span2">Name :</td>
+                                        <td>
+                                           {{Name}}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="span2">Phone :</td>
+                                        <td>
+                                            {{Phone}}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="span2">Class :</td>
+                                        <td>
+                                            {{Department_Name}}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="span2">Department :</td>
+                                        <td>
+                                            {{Class_Name}}
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                            
+
+                        </div>
+
+                        <div class="space5"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END PAGE CONTENT-->
+    </div>
+    <!-- END PAGE CONTAINER-->
+</div>
+<!-- END PAGE --> 

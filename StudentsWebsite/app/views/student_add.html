@@ -1,0 +1,145 @@
+      <div id="main-content">
+         <!-- BEGIN PAGE CONTAINER-->
+         <div class="container-fluid">
+            <!-- BEGIN PAGE HEADER-->   
+            <div class="row-fluid">
+               <div class="span12">
+                   <!-- BEGIN THEME CUSTOMIZER-->
+                   <div id="theme-change" class="hidden-phone">
+                       <i class="icon-cogs"></i>
+                        <span class="settings">
+                            <span class="text">Theme:</span>
+                            <span class="colors">
+                                <span class="color-default" data-style="default"></span>
+                                <span class="color-gray" data-style="gray"></span>
+                                <span class="color-purple" data-style="purple"></span>
+                                <span class="color-navy-blue" data-style="navy-blue"></span>
+                            </span>
+                        </span>
+                   </div>
+                   <!-- END THEME CUSTOMIZER-->
+                  <h3 class="page-title">
+                     Student
+                     <small>Student ADD</small>
+                  </h3>
+                   <ul class="breadcrumb">
+                       <li>
+                           <a href="#"><i class="icon-home"></i></a><span class="divider">&nbsp;</span>
+                       </li>
+                       <li>
+                           <a href="#">Student</a> <span class="divider">&nbsp;</span>
+                       </li>
+                       <li><a href="#">Student ADD</a><span class="divider-last">&nbsp;</span></li>
+                   </ul>
+               </div>
+            </div>
+            <!-- END PAGE HEADER-->
+            <!-- BEGIN PAGE CONTENT-->
+            <div class="row-fluid">
+               <div class="span12">
+                  <!-- BEGIN VALIDATION STATES-->
+                   <div class="widget">
+
+                       <div class="widget-body">
+
+
+
+                           <div class="alert alert-success" ng-if="Message">
+                               <button class="close" data-dismiss="alert">X</button>
+                               <strong>Success!</strong> {{Message}}
+                           </div>
+                           <div class="alert alert-error" ng-if="Message">
+                               <button class="close" data-dismiss="alert">×</button>
+                               <strong>Error!</strong> {{Message}}.
+                           </div>
+                       </div>
+                           <div class="widget-title">
+                               <h4><i class="icon-reorder"></i>Student ADD</h4>
+                               <span class="tools">
+                                   <a href="javascript:;" class="icon-chevron-down"></a>
+                                   <a href="javascript:;" class="icon-remove"></a>
+                               </span>
+                           </div>
+
+
+
+
+                           <div class="widget-body form">
+                               <!-- <p>Basic validations</p> -->
+                               <!-- BEGIN FORM-->
+                               <form name="userForm" ng-submit="save(userForm.$valid)" class="form-horizontal" enctype="multipart/form-data" novalidate>
+                                   <div class="control-group">
+                                       <label class=" control-label">Name</label>
+                                       <div class="controls">
+                                           <input type="text" class="span6" name="Name" ng-model="Name" id="inputSuccess" ng-minlength="8" ng-maxlength="25" required/>
+                                           <span class="text-error" ng-show="userForm.Name.$error.minlength">Your Name must be upto 8 digit</span>
+                                           <span class="text-error" ng-show="userForm.Name.$error.maxlength">Your Name must be less than 25 digit</span>
+                                           <span class="text-error" ng-show="userForm.Name.$error.required">Required Name</span>
+                                       </div>
+                                   </div>
+                                   <div class="control-group">
+                                       <label class=" control-label">Phone No</label>
+                                       <div class="controls input-icon">
+                                           <input type="text" class="span6" name="Phone " ng-model="Phone" id="inputsuccess1" ng-minlength="3" ng-maxlength="12" required/>
+                                           <span class="text-error" ng-show="userForm.Phone.$error.minlength">Your Phone number must be upto 3 digit</span>
+                                           <span class="text-error" ng-show="userForm.Phone.$error.maxlength">Your Phone number must be less than 12 digit</span>
+                                           <span class="text-error" ng-show="userForm.Phone.$error.required">Required Phone</span>
+                                       </div>
+                                   </div>
+
+                                   <div class="control-group">
+                                       <label class="control-label">Department</label>
+                                       <div class="controls">
+                                           <select class="input-large m-wrap" name="Department_id" ng-model="Department_id" tabindex="-1" required>
+                                               <option value="">Choose Department</option>
+                                               <option ng-repeat="Dept in Department" ng-selected="Department_id==Dept.Id" value="{{Dept.Id}}">{{Dept.Department_Name}}</option>
+                                           </select>
+                                           <span class="help-inline" ng-show="userForm.Department_id.$dirty && userForm.Department_id.$invalid">Please Select a Department</span>
+                                           <span class="help-inline" ng-show="userForm.Department_id.$error.required">Required Department</span>
+                                       </div>
+                                   </div>
+
+
+
+                                   <div class="control-group">
+                                       <label class="control-label">Class</label>
+                                       <div class="controls">
+                                           <select class="input-large m-wrap" name="Class_id" ng-model="Class_id" tabindex="-1" required>
+                                               <option value="">Choose Class</option>
+                                               <option ng-repeat="cls in Class" ng-selected="Class_id==cls.Id" value="{{cls.Id}}">{{cls.Class1}}</option>
+
+                                           </select>
+                                           <span class="help-inline" ng-show="userForm.Class_id.$dirty && userForm.Class_id.$invalid">Please Select a Department</span>
+                                           <span class="help-inline" ng-show="userForm.Class_id.$error.required">Required Department</span>
+                                       </div>
+                                   </div>
+
+                                   <div class="control-group">
+                                       <label class="control-label">Default</label>
+                                       <div class="controls">
+                                           <input type="file" file-model="myFile" class="default" />
+                                       </div>
+                                   </div>
+
+
+
+
+
+
+                                   <div class="form-actions">
+                                       <button type="submit" ng-disabled="userForm.$invalid || userForm.$pristine" class="btn btn-success">Save</button>
+                                       <button type="button" ng-click="clear()" class="btn">Cancel</button>
+                                   </div>
+                               </form>
+                               <!-- END FORM-->
+                           </div>
+                       </div>
+                  <!-- END VALIDATION STATES-->
+               </div>
+            </div>
+
+            <!-- END PAGE CONTENT-->         
+         </div>
+         <!-- END PAGE CONTAINER-->
+      </div>
+      <!-- END PAGE -->  
